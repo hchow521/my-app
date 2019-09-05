@@ -19,8 +19,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.resolve(__dirname, 'dist')));
+//app.use(express.static(path.join(__dirname, 'public')));
+//开放读取文件路径
 app.use(express.static(path.resolve(__dirname, 'uploads')));
 
 // 访问单页
@@ -38,6 +38,8 @@ app.all('*', function(req, res, next) {
     next();
 });
 app.use('/api', usersRouter);
+
+// 文件上传/upload
 const multer  = require('multer');
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
