@@ -2,8 +2,8 @@
  
  > 一个 基于node+express+mongodb 博客后台服务
  >
-#demo[https://m.hchow521.xyz]
-#apiURL[https://www.hchow521.xyz:3000](test:https://www.hchow521.xyz:3000/api/getinfo)
+# demo[https://m.hchow521.xyz]
+# apiURL[https://www.hchow521.xyz:3000](test:https://www.hchow521.xyz:3000/api/getinfo)
 ###### 后台管理vue-cli + element-ui + vue-quill-editor [https://github.com/hchow521/my-admin]
 ### 环境搭建
 ######请确保已安装 node && mongodb [https://www.runoob.com/mongodb/mongodb-tutorial.html]
