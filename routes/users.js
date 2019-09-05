@@ -27,6 +27,17 @@ mongoose.connect(url, function (err) {
 *
 * */
 
+//默认增加一个用户
+let newUser = new User({
+  username: 'hchow',
+  password: '013ce3a120039144d2d719c3f48c53fa',
+  phone: '15913****60',
+  email: '',
+});
+newUser.save(function (err, user) {
+  if (err) return console.log('添加默认用户失败或用户已存在');
+  console.log('添加默认用户：' + user);
+});
 
 //---------------------------------------------------登陆
 router.post('/login', function (req, res) {
